@@ -19,6 +19,7 @@ describe('authUserReducer function', () => {
     const nextState = authUserReducer(initialState, action);
 
     expect(nextState).toEqual(initialState);
+    // expect(nextState).toEqual('wrong value');
   });
 
   it('should return the authUser when given by setAuthUser action', () => {

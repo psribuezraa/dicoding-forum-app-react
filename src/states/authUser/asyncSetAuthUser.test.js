@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import {
   describe, it, expect, vi, beforeEach, afterEach,
 } from 'vitest';
@@ -58,7 +59,7 @@ describe('asyncSetAuthUser thunk', () => {
     api.login = () => Promise.reject(fakeErrorResponse);
     api.putAccessToken = vi.fn();
     api.getOwnProfile = vi.fn();
-    
+
     const dispatch = vi.fn();
     window.alert = vi.fn();
 
