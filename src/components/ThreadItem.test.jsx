@@ -1,4 +1,5 @@
-import { describe, it, expect, afterEach, vi } from 'vitest';
+/* eslint-disable react/jsx-props-no-spreading */
+import { describe, it, expect, afterEach } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import ThreadItem from './ThreadItem';
@@ -32,7 +33,7 @@ describe('ThreadItem component', () => {
     render(
       <MemoryRouter>
         <ThreadItem {...dummyThread} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(screen.getByText('Tips Belajar React')).toBeInTheDocument();
   });
@@ -41,7 +42,7 @@ describe('ThreadItem component', () => {
     render(
       <MemoryRouter>
         <ThreadItem {...dummyThread} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(screen.getByText('#react')).toBeInTheDocument();
   });
@@ -50,7 +51,7 @@ describe('ThreadItem component', () => {
     render(
       <MemoryRouter>
         <ThreadItem {...dummyThread} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(screen.getByText('Bagaimana cara belajar React?')).toBeInTheDocument();
   });
